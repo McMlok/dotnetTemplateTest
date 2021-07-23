@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "McMlok",
+    "classifications": [ "Test" ],
+    "groupIdentity": "McMlok.Test",
+    "identity": "McMlok.Test.Rename",
+    "name": "Rename folder test",
+    "preferNameDirectory": true,
+    "shortName": "mcmlok-rename-test",
+    "sourceName": "test",
+    "defaultName": "TestApplication1",
+    "primaryOutputs": [
+        { "path": "COMPONENT-ID.sln" }
+    ],
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "include": "**/*"
+        }
+    ],
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "symbols": {
+        "ComponentIdLower": {
+            "type": "generated",
+            "generator": "casing",
+            "parameters": {
+                "source": "name",
+                "toLower": true
+            },
+            "replaces": "RenameToLower",
+            "fileRename": "RenameToLower"
+        }
+    }
+}
